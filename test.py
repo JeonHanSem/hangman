@@ -7,7 +7,7 @@ class hangmanTestCase(unittest.TestCase):
 		self.assertTrue(ret)
 	def test_False(self):
 		ret = hangman.checkCorrectAnswer("zebrio","zebra")
-		self.assertTrue(answer)
+		self.assertTrue(ret)
 
 if __name__ == "__main__":
 	unittest.main()
