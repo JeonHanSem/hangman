@@ -1,13 +1,16 @@
 import unittest
 import hangman
 
-class hangmanTestCase(unittest.TestCase):
-	def test_True(self):
-		ret = hangman.checkCorrectAnswer("tac","cat")
-		self.assertTrue(ret)
-	def test_False(self):
-		answer = hangman.checkCorrectAnswer("zebrio","zebra")
-		self.assertTrue(answer)
+class HangmanTestCase(unittest.TestCase):
+
+    # checkCorrectAnswer(correctLetters, secretWord)
+    def test_checkCorrectAnswer(self):
+        answer = hangman.checkCorrectAnswer("baon", "baboon")
+        self.assertTrue(answer)
+
+    def test_checkWrongAnswer(self):
+        answer = hangman.checkWrongAnswer("zebrio", "zebra")
+        self.assertTrue(answer)
 
 if __name__ == "__main__":
-	unittest.main()
+    unittest.main()
